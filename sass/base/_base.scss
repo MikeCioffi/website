@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // this is what 1 rem is.
+    font-size: 62.5%;
+
+    scroll-behavior: smooth;
+}
+
+
+body {
+    box-sizing: border-box;
+
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 768px) {
+
+    /* Styles */
+    html {
+
+        font-size: 25%;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 375px) {
+
+    /* Styles */
+    html {
+
+        font-size: 20%;
+    }
+}

@@ -1,0 +1,76 @@
+.container {
+    /* will cover the 100% of viewport */
+    overflow: auto;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+    /* height of your footer */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 15px;
+
+    background-color: red;
+    width: 100%;
+}
+
+.heading-image {
+
+    height: $grid-row-height-large;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation-name: moveInTop;
+    animation-duration: 1s;
+    background-image: url(../img/me.jpg);
+    transition: all 2s;
+}
+
+
+.nav-link {
+    text-decoration: none;
+    list-style: none;
+    color: #{$color-grey-dark};
+    text-transform: uppercase;
+
+
+    span {
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 5px;
+            background: black;
+            transition: width .5s;
+        }
+
+
+        &:hover {
+            margin-bottom: 0px;
+            color: #{$color-tertiary-light};
+
+
+            &:after {
+
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+
+#section-about,
+#section-projects {
+    height: 100vh;
+
+}
+
+.section-about {
+    margin-top: 35vh;
+    color: $color-tertiary-light;
+    background-color: $color-white;
+}
